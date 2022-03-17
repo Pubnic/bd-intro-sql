@@ -1,0 +1,23 @@
+ID (int)	Nome (str)	Peso (float)	Morreu (bool)
+1	Joao	50.00	TRUE
+2	Maria	60.00	FALSE
+3	Jose	90.00	TRUE
+4	Carlos	101.00	FALSE
+5	Josefina	55.00	TRUE
+
+[
+    { "id": 1, "name": "Joao", "weight": 50.00, "dead": true },
+    { "id": 2, "name": "Maria", "weight": 60.00, "dead": false },
+    { "id": 3, "name": "Jose", "weight": 90.00, "dead": true },
+    { "id": 4, "name": "Carlos", "weight": 101.00, "dead": false },
+    { "id": 5, "name": "Josefina", "weight": 55.00, "dead": true }
+]
+
+class Alunos:
+    id: int
+    name: str
+    weight: float
+    dead: bool
+
+aluno1.id --> 1
+aluno1.name --> Joao

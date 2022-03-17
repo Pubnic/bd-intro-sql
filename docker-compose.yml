@@ -1,0 +1,28 @@
+version: '3'
+services:
+  postgres_example:
+    container_name: postgres_example
+    image: postgres
+    environment:
+      - POSTGRES_USER=mystique
+      - POSTGRES_PASSWORD=zapay
+      - POSTGRES_DB=mystique_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./ignore/postgres:/var/lib/postgresql/data
+  pgadmin_example:
+    container_name: pgadmin_example
+    image: dpage/pgadmin4
+    ports:
+      - "80:80"
+    volumes:
+      - ./ignore/pgadmin:/var/lib/pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=nere@usezapay.com.br
+      - PGADMIN_DEFAULT_PASSWORD=zapay
+  jhipster_example:
+    container_name: jhipster_example
+    image: jhipster/jdl-studio
+    ports:
+      - "8080:80"
